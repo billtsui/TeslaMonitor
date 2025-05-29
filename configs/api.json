@@ -1,0 +1,11 @@
+{
+  "vehicle": {
+    "baseUri": "https://owner-api.vn.cloud.tesla.cn"
+  },
+  "auth": {
+    "baseUri": "https://auth.tesla.cn",
+    "authorize": "/oauth2/v3/authorize",
+    "audience": "https://fleet-api.prd.cn.vn.cloud.tesla.cn",
+    "token": "/oauth2/v3/token"
+  }
+}
