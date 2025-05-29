@@ -1,2 +1,2 @@
 # TeslaMonitor
-A tool for Tesla's vehicles which contains Model S, 3, X, and Y.
+A tool that can monitor the status of Tesla vehicles, including Model S, 3, X, and Y.
