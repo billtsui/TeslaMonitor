@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TeslaMonitor.Dto;
+namespace TeslaMonitor.Entities.OAuth;
 
 public class Auth
 {

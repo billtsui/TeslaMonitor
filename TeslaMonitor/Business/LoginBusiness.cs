@@ -3,7 +3,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Web;
-using TeslaMonitor.Dto;
+using TeslaMonitor.Entities.OAuth;
+using TeslaMonitor.Entities.Api;
 
 namespace TeslaMonitor.Business;
 
@@ -19,7 +20,7 @@ public class LoginBusiness
     private const string ResponseType = "code";
     private const string Scope = "openid email offline_access";
     private const string Locale = "zh-CN";
-    private const string ApiConfigFilePath = "./configs/api.json";
+    private const string ApiConfigFilePath = "./Configs/api.json";
     private const string GrantType = "authorization_code";
     private const int RandomStringLength = 86;
     private const int StateStringLength = 20;
@@ -28,6 +29,7 @@ public class LoginBusiness
     private string FileContent { get; set; }
     public ApiUri? WebApi { get; set; }
     public string? Code { get; set; }
+    public Tokens tokens { get; set; }
 
     public LoginBusiness()
     {

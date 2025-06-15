@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
+using TeslaMonitor.Entities.OAuth;
 
-namespace TeslaMonitor.Dto;
+namespace TeslaMonitor.Entities.Api;
 
 public class ApiUri
 {

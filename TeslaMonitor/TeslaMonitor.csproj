@@ -6,16 +6,28 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\Tesla_T_symbol.svg.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3240.44" />
+    <Content Include="Resources\Tesla_T_symbol.svg.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="configs\api.json">
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3296.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Configs\api.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Database\teslamonitor.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties configs_4api_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

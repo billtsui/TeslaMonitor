@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             webView2 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            richTextBox = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)webView2).BeginInit();
             SuspendLayout();
             // 
@@ -39,30 +38,23 @@
             webView2.AllowExternalDrop = true;
             webView2.CreationProperties = null;
             webView2.DefaultBackgroundColor = Color.White;
-            webView2.Dock = DockStyle.Top;
+            webView2.Dock = DockStyle.Fill;
             webView2.Location = new Point(0, 0);
             webView2.Name = "webView2";
-            webView2.Size = new Size(2126, 1061);
+            webView2.Size = new Size(1976, 1354);
             webView2.TabIndex = 0;
             webView2.ZoomFactor = 1D;
             webView2.NavigationStarting += webView2_NavigationStarting;
-            // 
-            // richTextBox
-            // 
-            richTextBox.Dock = DockStyle.Bottom;
-            richTextBox.Location = new Point(0, 1066);
-            richTextBox.Name = "richTextBox";
-            richTextBox.Size = new Size(2126, 756);
-            richTextBox.TabIndex = 1;
-            richTextBox.Text = "";
+            webView2.NavigationCompleted += webView2_NavigationCompleted;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(14F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2126, 1822);
-            Controls.Add(richTextBox);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1976, 1354);
             Controls.Add(webView2);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
@@ -77,6 +69,5 @@
         #endregion
 
         private Microsoft.Web.WebView2.WinForms.WebView2 webView2;
-        private RichTextBox richTextBox;
     }
 }
